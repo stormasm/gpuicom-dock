@@ -50,10 +50,6 @@ impl super::Story for ButtonStory {
         "Displays a button or a component that looks like a button."
     }
 
-    fn closeable() -> bool {
-        false
-    }
-
     fn new_view(cx: &mut WindowContext) -> View<impl gpui::FocusableView> {
         Self::view(cx)
     }
