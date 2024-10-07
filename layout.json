@@ -10,33 +10,6 @@
             "children": [],
             "info": {
               "panel": {
-                "story_klass": "ButtonStory"
-              }
-            }
-          },
-          {
-            "panel_name": "StoryContainer",
-            "children": [],
-            "info": {
-              "panel": {
-                "story_klass": "InputStory"
-              }
-            }
-          },
-          {
-            "panel_name": "StoryContainer",
-            "children": [],
-            "info": {
-              "panel": {
-                "story_klass": "TextStory"
-              }
-            }
-          },
-          {
-            "panel_name": "StoryContainer",
-            "children": [],
-            "info": {
-              "panel": {
                 "story_klass": "DropdownStory"
               }
             }
@@ -58,101 +31,11 @@
                 "story_klass": "PopupStory"
               }
             }
-          },
-          {
-            "panel_name": "StoryContainer",
-            "children": [],
-            "info": {
-              "panel": {
-                "story_klass": "SwitchStory"
-              }
-            }
-          },
-          {
-            "panel_name": "StoryContainer",
-            "children": [],
-            "info": {
-              "panel": {
-                "story_klass": "ProgressStory"
-              }
-            }
-          },
-          {
-            "panel_name": "StoryContainer",
-            "children": [],
-            "info": {
-              "panel": {
-                "story_klass": "TableStory"
-              }
-            }
-          },
-          {
-            "panel_name": "StoryContainer",
-            "children": [],
-            "info": {
-              "panel": {
-                "story_klass": "ImageStory"
-              }
-            }
-          },
-          {
-            "panel_name": "StoryContainer",
-            "children": [],
-            "info": {
-              "panel": {
-                "story_klass": "IconStory"
-              }
-            }
-          },
-          {
-            "panel_name": "StoryContainer",
-            "children": [],
-            "info": {
-              "panel": {
-                "story_klass": "TooltipStory"
-              }
-            }
-          },
-          {
-            "panel_name": "StoryContainer",
-            "children": [],
-            "info": {
-              "panel": {
-                "story_klass": "ProgressStory"
-              }
-            }
-          },
-          {
-            "panel_name": "StoryContainer",
-            "children": [],
-            "info": {
-              "panel": {
-                "story_klass": "CalendarStory"
-              }
-            }
-          },
-          {
-            "panel_name": "StoryContainer",
-            "children": [],
-            "info": {
-              "panel": {
-                "story_klass": "ResizableStory"
-              }
-            }
-          },
-          {
-            "panel_name": "StoryContainer",
-            "children": [],
-            "info": {
-              "panel": {
-                "story_klass": "ScrollableStory"
-              }
-            }
           }
         ],
         "info": {
           "tabs": {
-            "active_index": 5
+            "active_index": 2
           }
         }
       }
