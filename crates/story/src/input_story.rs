@@ -53,10 +53,6 @@ impl super::Story for InputStory {
         "A control that allows the user to input text."
     }
 
-    fn closeable() -> bool {
-        false
-    }
-
     fn new_view(cx: &mut WindowContext) -> View<impl gpui::FocusableView> {
         Self::view(cx)
     }
