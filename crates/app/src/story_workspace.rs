@@ -4,8 +4,8 @@ use prelude::FluentBuilder as _;
 use serde::Deserialize;
 use std::{sync::Arc, time::Duration};
 use story::{
-    AccordionStory, ButtonStory, CalendarStory, DropdownStory, IconStory, ImageStory, InputStory,
-    ListStory, ModalStory, PopupStory, ProgressStory, ResizableStory, ScrollableStory,
+    AccordionStory, ButtonStory, CalendarStory, DropdownStory, HwStory, IconStory, ImageStory,
+    InputStory, ListStory, ModalStory, PopupStory, ProgressStory, ResizableStory, ScrollableStory,
     StoryContainer, SwitchStory, TableStory, TextStory, TooltipStory,
 };
 use ui::{
@@ -227,6 +227,7 @@ impl StoryWorkspace {
             vec![DockItem::tabs(
                 vec![
                     Arc::new(StoryContainer::panel::<ButtonStory>(cx)),
+                    Arc::new(StoryContainer::panel::<HwStory>(cx)),
                     Arc::new(StoryContainer::panel::<InputStory>(cx)),
                     Arc::new(StoryContainer::panel::<DropdownStory>(cx)),
                     Arc::new(StoryContainer::panel::<TextStory>(cx)),

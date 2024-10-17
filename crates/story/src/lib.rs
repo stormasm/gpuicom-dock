@@ -2,6 +2,7 @@ mod accordion_story;
 mod button_story;
 mod calendar_story;
 mod dropdown_story;
+mod helloworld_story;
 mod icon_story;
 mod image_story;
 mod input_story;
@@ -21,6 +22,7 @@ pub use accordion_story::AccordionStory;
 pub use button_story::ButtonStory;
 pub use calendar_story::CalendarStory;
 pub use dropdown_story::DropdownStory;
+pub use helloworld_story::HwStory;
 pub use icon_story::IconStory;
 pub use image_story::ImageStory;
 pub use input_story::InputStory;
@@ -241,6 +243,7 @@ impl StoryState {
             "ButtonStory" => story!(ButtonStory),
             "CalendarStory" => story!(CalendarStory),
             "DropdownStory" => story!(DropdownStory),
+            "HwStory" => story!(HwStory),
             "IconStory" => story!(IconStory),
             "ImageStory" => story!(ImageStory),
             "InputStory" => story!(InputStory),
