@@ -4,7 +4,6 @@ use anyhow::Result;
 use app_state::AppState;
 use assets::Assets;
 use gpui::{actions, App, AppContext, KeyBinding, Menu, MenuItem};
-use ui::input::{Copy, Cut, Paste, Redo, Undo};
 
 mod app_state;
 mod assets;
@@ -35,23 +34,10 @@ fn main() {
 
         cx.on_action(quit);
 
-        cx.set_menus(vec![
-            Menu {
-                name: "GPUI App".into(),
-                items: vec![MenuItem::action("Quit", Quit)],
-            },
-            Menu {
-                name: "Edit".into(),
-                items: vec![
-                    MenuItem::os_action("Undo", Undo, gpui::OsAction::Undo),
-                    MenuItem::os_action("Redo", Redo, gpui::OsAction::Redo),
-                    MenuItem::separator(),
-                    MenuItem::os_action("Cut", Cut, gpui::OsAction::Cut),
-                    MenuItem::os_action("Copy", Copy, gpui::OsAction::Copy),
-                    MenuItem::os_action("Paste", Paste, gpui::OsAction::Paste),
-                ],
-            },
-        ]);
+        cx.set_menus(vec![Menu {
+            name: "GPUI App".into(),
+            items: vec![MenuItem::action("Quit", Quit)],
+        }]);
         cx.activate(true);
 
         story_workspace::open_new(app_state.clone(), cx, |_workspace, _cx| {
