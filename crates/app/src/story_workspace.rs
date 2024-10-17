@@ -3,11 +3,7 @@ use gpui::*;
 use prelude::FluentBuilder as _;
 use serde::Deserialize;
 use std::{sync::Arc, time::Duration};
-use story::{
-    AccordionStory, ButtonStory, CalendarStory, DropdownStory, HwStory, IconStory, ImageStory,
-    InputStory, ListStory, ModalStory, PopupStory, ProgressStory, ResizableStory, ScrollableStory,
-    StoryContainer, SwitchStory, TableStory, TextStory, TooltipStory,
-};
+use story::{HwStory, StoryContainer};
 use ui::{
     button::{Button, ButtonStyled as _},
     color_picker::{ColorPicker, ColorPickerEvent},
@@ -200,15 +196,15 @@ impl StoryWorkspace {
     fn reset_default_layout(dock_area: WeakView<DockArea>, cx: &mut WindowContext) {
         let dock_item = Self::init_default_layout(&dock_area, cx);
         let left_panels: Vec<Arc<dyn PanelView>> =
-            vec![Arc::new(StoryContainer::panel::<ListStory>(cx))];
+            vec![Arc::new(StoryContainer::panel::<HwStory>(cx))];
 
         let bottom_panels: Vec<Arc<dyn PanelView>> = vec![
-            Arc::new(StoryContainer::panel::<TooltipStory>(cx)),
-            Arc::new(StoryContainer::panel::<IconStory>(cx)),
+            Arc::new(StoryContainer::panel::<HwStory>(cx)),
+            Arc::new(StoryContainer::panel::<HwStory>(cx)),
         ];
 
         let right_panels: Vec<Arc<dyn PanelView>> =
-            vec![Arc::new(StoryContainer::panel::<ImageStory>(cx))];
+            vec![Arc::new(StoryContainer::panel::<HwStory>(cx))];
 
         _ = dock_area.update(cx, |view, cx| {
             view.set_version(MAIN_DOCK_AREA.version, cx);
@@ -225,27 +221,7 @@ impl StoryWorkspace {
         DockItem::split_with_sizes(
             Axis::Vertical,
             vec![DockItem::tabs(
-                vec![
-                    Arc::new(StoryContainer::panel::<ButtonStory>(cx)),
-                    Arc::new(StoryContainer::panel::<HwStory>(cx)),
-                    Arc::new(StoryContainer::panel::<InputStory>(cx)),
-                    Arc::new(StoryContainer::panel::<DropdownStory>(cx)),
-                    Arc::new(StoryContainer::panel::<TextStory>(cx)),
-                    Arc::new(StoryContainer::panel::<ModalStory>(cx)),
-                    Arc::new(StoryContainer::panel::<PopupStory>(cx)),
-                    Arc::new(StoryContainer::panel::<SwitchStory>(cx)),
-                    Arc::new(StoryContainer::panel::<ProgressStory>(cx)),
-                    Arc::new(StoryContainer::panel::<TableStory>(cx)),
-                    Arc::new(StoryContainer::panel::<ImageStory>(cx)),
-                    Arc::new(StoryContainer::panel::<IconStory>(cx)),
-                    Arc::new(StoryContainer::panel::<TooltipStory>(cx)),
-                    Arc::new(StoryContainer::panel::<ProgressStory>(cx)),
-                    Arc::new(StoryContainer::panel::<CalendarStory>(cx)),
-                    Arc::new(StoryContainer::panel::<ResizableStory>(cx)),
-                    Arc::new(StoryContainer::panel::<ScrollableStory>(cx)),
-                    Arc::new(StoryContainer::panel::<AccordionStory>(cx)),
-                    // Arc::new(StoryContainer::panel::<WebViewStory>(cx)),
-                ],
+                vec![Arc::new(StoryContainer::panel::<HwStory>(cx))],
                 None,
                 &dock_area,
                 cx,
