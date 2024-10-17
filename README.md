@@ -1,1 +1,3 @@
-# gpuicom-dock
+This is just the application code including the crates story and app...
+
+The ui crate is located now in its own repo !
