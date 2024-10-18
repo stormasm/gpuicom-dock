@@ -108,6 +108,8 @@ impl StoryContainer {
     pub fn new(cx: &mut WindowContext) -> Self {
         let focus_handle = cx.focus_handle();
 
+        println!("hola 101 StoryContainer {:?}", focus_handle);
+
         Self {
             focus_handle,
             name: "".into(),
@@ -123,6 +125,8 @@ impl StoryContainer {
     }
 
     pub fn panel<S: Story>(cx: &mut WindowContext) -> View<Self> {
+        println!("hola 100 Panel");
+
         let name = S::title();
         let description = S::description();
         let story = S::new_view(cx);
