@@ -51,6 +51,8 @@ struct DockAreaTab {
 
 impl StoryWorkspace {
     pub fn new(_app_state: Arc<AppState>, cx: &mut ViewContext<Self>) -> Self {
+        println!("hola 120 StoryWorkspace::new");
+
         cx.observe_window_appearance(|_, cx| {
             Theme::sync_system_appearance(cx);
         })
